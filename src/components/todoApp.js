@@ -1,5 +1,6 @@
 
 import { useState} from "react";
+import Todo from "./todo";
 
 export default function TodoApp(){
     
@@ -39,8 +40,8 @@ export default function TodoApp(){
 
             <div className="todosContainer">
                 {
-                    todos.map(item => (
-                        <div key={item.id}>{item.title}</div>
+                    todos.map((item) => (
+                        <Todo key={item.id} item={item} />
                     ))
                 }
             </div>
